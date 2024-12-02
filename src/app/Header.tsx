@@ -1,4 +1,4 @@
-import logo from "@/assets/imgs/Logo.png";
+import logo from "@/assets/imgs/logo.png";
 import cls from "./style.module.scss";
 import clsx from "clsx";
 
