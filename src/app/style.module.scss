@@ -1,0 +1,52 @@
+.app {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  max-width: 960px;
+  width: 100%;
+  padding: 50px 0;
+
+  &__imgWrapper {
+    max-width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.main {
+  max-width: 960px;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__contentCards {
+    width: 100%;
+  }
+}
+
+.container {
+  width: 78.54%;
+  margin: 0 auto;
+}
+
+.no_flights {
+  display: inline-block;
+  color: #2196f3;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}

@@ -1,0 +1,24 @@
+.button {
+  padding: 15px 20px;
+  background-color: #2196f3;
+  border-radius: 5px;
+  width: 100%;
+
+  &:hover {
+    background-color: #1769aa; // Цвет кнопки при наведении
+  }
+
+  &:active {
+    background-color: #2196f3; // Цвет кнопки при наведении
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 167%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+  }
+}
