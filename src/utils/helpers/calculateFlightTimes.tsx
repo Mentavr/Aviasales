@@ -2,7 +2,7 @@ import { format, addMinutes } from "date-fns";
 
 export const calculateFlightTimes = (
   departureDate: string,
-  flightDurationMinutes: number
+  flightDurationMinutes: number,
 ) => {
   const departure = new Date(departureDate);
 

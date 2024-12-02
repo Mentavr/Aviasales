@@ -25,5 +25,5 @@ createRoot(document.getElementById("root")!).render(
       />
       <App />
     </ContextProvider>
-  </ProviderReduces>
+  </ProviderReduces>,
 );

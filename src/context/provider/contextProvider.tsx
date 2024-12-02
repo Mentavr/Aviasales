@@ -15,7 +15,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
   const tickets = useAppSelector(ticketsSelector);
   const [countTickets, setCountTickets] = useState<number>(5);
   const [visibleTickets, setVisibleTickets] = useState<ITickets[]>(
-    [] as ITickets[]
+    [] as ITickets[],
   );
 
   const { panelOptions, toggleOptions } = useAppSelector(filterOptionsSelector);
@@ -27,7 +27,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
     const filterOptions = Object.fromEntries(
       Object.values(panelOptions)
         .filter((option) => option.checked)
-        .map((option) => [option.stop, option.stop])
+        .map((option) => [option.stop, option.stop]),
     );
 
     setVisibleTickets(sortOptions(filterOptions, sort));

@@ -9,7 +9,7 @@ export const CardTicket = ({ price, carrier, segments }: ITickets) => {
       <div className={cls.card__head}>
         <div className={cls.card__head_price_wrapper}>
           <span className={cls.card__head_price}>{`${numberWithSpace(
-            price
+            price,
           )} Р`}</span>
         </div>
         <div className={cls.card__head_logo_wrapper}>
@@ -33,7 +33,7 @@ export const CardTicket = ({ price, carrier, segments }: ITickets) => {
                 origin={origin}
               />
             );
-          }
+          },
         )}
       </div>
     </div>

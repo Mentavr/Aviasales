@@ -26,8 +26,9 @@ export const getTickets = createAsyncThunk(
   "apiTickets/tickets",
   async (id: string) => {
     try {
-      const { data }: { data: InitialStateType} =
-        await clientAxios(`tickets?searchId=${id}`);
+      const { data }: { data: InitialStateType } = await clientAxios(
+        `tickets?searchId=${id}`,
+      );
       return data;
     } catch (error) {
       if (isAxiosError(error)) {
@@ -37,7 +38,7 @@ export const getTickets = createAsyncThunk(
       }
       throw error;
     }
-  }
+  },
 );
 
 const initialState: ApiTicketsState = {

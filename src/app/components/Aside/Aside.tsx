@@ -1,8 +1,5 @@
-import { FilterPanel } from "../FilterPanel/FilterPanel"
-
+import { FilterPanel } from "../FilterPanel/FilterPanel";
 
 export const Aside = () => {
-    return (
-        <FilterPanel />
-    )
-}
+  return <FilterPanel />;
+};

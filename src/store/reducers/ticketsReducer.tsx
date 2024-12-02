@@ -33,10 +33,10 @@ const ticketsReducer = createSlice({
     builder.addCase(
       getTickets.fulfilled,
       (state, action: PayloadAction<InitialStateType>) => {
-        const {tickets, stop} = action.payload
+        const { tickets, stop } = action.payload;
         state.tickets = [...state.tickets, ...tickets];
         state.stop = stop;
-      }
+      },
     );
   },
 });

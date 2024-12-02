@@ -20,7 +20,7 @@ const Checkbox = React.forwardRef<
       className={clsx(
         cls.checkbox__border,
         props.checked && cls.checkbox__border_checked,
-        className
+        className,
       )}
       onChange={onChange}
       {...props}

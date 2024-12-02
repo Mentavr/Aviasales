@@ -30,7 +30,6 @@ export const Main = () => {
     refIdInterval.current = idTickets;
   };
 
-
   useEffect(() => {
     if (searchId && !isStop) {
       getTicketsTimeOut();

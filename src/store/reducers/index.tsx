@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
-import filterReducer from './filterReducer';
-import ticketsReducer from './ticketsReducer';
-import apiTicketsReducer from './services/apiTicketsReducer';
+import { combineReducers } from "redux";
+import filterReducer from "./filterReducer";
+import ticketsReducer from "./ticketsReducer";
+import apiTicketsReducer from "./services/apiTicketsReducer";
 
 const rootReducer = combineReducers({
   filter: filterReducer,

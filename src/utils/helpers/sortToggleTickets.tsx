@@ -23,25 +23,31 @@ const fast: IFilterFunction = (tickets) => {
 };
 
 const optimal: IFilterFunction = (tickets) => {
-
   const maxPrice = Math.max(...tickets.map((ticket) => ticket.price));
   const maxDuration = Math.max(
-    ...tickets.map((ticket) => ticket.segments[0].duration + ticket.segments[1].duration)
+    ...tickets.map(
+      (ticket) => ticket.segments[0].duration + ticket.segments[1].duration,
+    ),
   );
   const maxStops = Math.max(
-    ...tickets.map((ticket) => ticket.segments[0].stops.length + ticket.segments[1].stops.length)
+    ...tickets.map(
+      (ticket) =>
+        ticket.segments[0].stops.length + ticket.segments[1].stops.length,
+    ),
   );
 
   return tickets.sort((a, b) => {
     const aScore =
       (a.price / maxPrice) * 0.4 +
       ((a.segments[0].duration + a.segments[1].duration) / maxDuration) * 0.4 +
-      ((a.segments[0].stops.length + a.segments[1].stops.length) / maxStops) * 0.2;
+      ((a.segments[0].stops.length + a.segments[1].stops.length) / maxStops) *
+        0.2;
 
     const bScore =
       (b.price / maxPrice) * 0.4 +
       ((b.segments[0].duration + b.segments[1].duration) / maxDuration) * 0.4 +
-      ((b.segments[0].stops.length + b.segments[1].stops.length) / maxStops) * 0.2;
+      ((b.segments[0].stops.length + b.segments[1].stops.length) / maxStops) *
+        0.2;
 
     return aScore - bScore;
   });
@@ -55,7 +61,7 @@ const options: IOptions = {
 
 export const sortToggleTickets = (
   toggleOption: keyof IOptions,
-  tickets: ITickets[]
+  tickets: ITickets[],
 ): ITickets[] => {
   return options[toggleOption](tickets);
 };

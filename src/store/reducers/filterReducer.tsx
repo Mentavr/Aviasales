@@ -23,7 +23,7 @@ export const filterSlice = createSlice({
         newObj = Object.fromEntries(
           Object.entries(state.panelOptions).map(([key, option]) => {
             return [key, { ...option, checked: allCheck }];
-          })
+          }),
         );
         state.panelOptions = newObj;
       } else {
@@ -39,7 +39,7 @@ export const filterSlice = createSlice({
           }
           return acc + (checked ? 1 : 0);
         },
-        0
+        0,
       );
 
       if (countChecks === 4) {
@@ -56,7 +56,7 @@ export const filterSlice = createSlice({
     },
     setToggleFilter: (
       state,
-      action: PayloadAction<"cheap" | "fast" | "optimal">
+      action: PayloadAction<"cheap" | "fast" | "optimal">,
     ) => {
       const selectedToggle = action.payload;
       state.toggleOptions = selectedToggle;
